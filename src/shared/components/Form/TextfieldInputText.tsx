@@ -10,7 +10,6 @@ export const TextfieldInputText = ({ name, ...rest }: TextfieldInputTextProps) =
 	const { clearError, defaultValue, error, fieldName, registerField } = useField(name);
 	const [value, setValue] = useState(defaultValue || '');
 	const theme = useTheme();
-	const smDown = useMediaQuery(theme.breakpoints.down('sm'));
 	const mdDown = useMediaQuery(theme.breakpoints.down('md'));
 
 	useEffect(() => {
@@ -22,7 +21,7 @@ export const TextfieldInputText = ({ name, ...rest }: TextfieldInputTextProps) =
 	}, [registerField, value, fieldName]);
 
 	return (
-		<Box marginY={theme.spacing(2)} paddingX={theme.spacing(2)} display='flex' justifyContent='center' >
+		<Box marginY={theme.spacing(2)} display='flex' justifyContent='center' >
 			<TextField
 				{...rest}
 				error={!!error}
