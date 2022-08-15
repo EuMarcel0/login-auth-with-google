@@ -4,7 +4,7 @@ import { Box, Button, useTheme, useMediaQuery, Divider, Typography, IconButton, 
 import { Form } from '@unform/web';
 import * as yup from 'yup';
 
-import { Header, TextfieldInputText, useAuthProvider } from '../../shared';
+import { Footer, Header, TextfieldInputText, useAuthProvider } from '../../shared';
 import IconGoogle from '../../assets/images/google.png';
 import WaveBg from '../../assets/images/wave.svg';
 import { Profile } from '../Profile/Profile';
@@ -54,6 +54,7 @@ export const Login = () => {
 					alignContent='center'
 					flexDirection='column'
 					position='relative'
+					bgcolor='#f7f7f7'
 				>
 					<Box sx={{ position: 'absolute', top: '0', left: '0', right: '0' }}>
 						<img src={WaveBg} />
@@ -61,6 +62,7 @@ export const Login = () => {
 					<Box
 						width={mdDown ? '80%' : smDown ? '100%' : '40%'}
 						marginX='auto'
+						marginTop={theme.spacing(10)}
 						border='1px solid #ccc'
 						paddingY={mdDown ? theme.spacing(1) : theme.spacing(2)}
 						paddingX={mdDown ? theme.spacing(1) : theme.spacing(2)}

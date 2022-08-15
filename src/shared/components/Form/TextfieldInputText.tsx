@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Box, TextField, TextFieldProps, useTheme, useMediaQuery } from '@mui/material';
+import { Box, TextField, TextFieldProps, useTheme } from '@mui/material';
 import { useField } from '@unform/core';
 
 type TextfieldInputTextProps = TextFieldProps & {
@@ -10,7 +10,6 @@ export const TextfieldInputText = ({ name, ...rest }: TextfieldInputTextProps) =
 	const { clearError, defaultValue, error, fieldName, registerField } = useField(name);
 	const [value, setValue] = useState(defaultValue || '');
 	const theme = useTheme();
-	const mdDown = useMediaQuery(theme.breakpoints.down('md'));
 
 	useEffect(() => {
 		registerField({
